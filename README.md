@@ -38,11 +38,12 @@ For this application is developed by Spring boot, you can just run it from the j
 
 	java -jar InterviewMFG-0.0.1-SNAPSHORT.jar
 
-# Using swager to test the REST api visually
+# Using swagger to test the REST api visually
 
 Swagger is an excellent tool for REST api management. For more information about swagger, click [here](http://swagger
 .io/). Also you can use curl to test the api, just choose what you like.
 
-1 In your browser, open the url: http://localhost/swagger-ui.html
-2 After page load finished, you wil see the good endpoint, that's it
-3 Every api operation is listed in the page, also they are easy to understand
+
+- In your browser, open the url: http://localhost/swagger-ui.html
+- After page load finished, you wil see the good endpoint, that's it
+- Every api operation is listed in the page, also they are easy to understand
