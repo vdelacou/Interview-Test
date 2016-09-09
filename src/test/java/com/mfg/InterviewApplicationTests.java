@@ -28,22 +28,22 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebAppConfiguration
 public class InterviewApplicationTests {
 
-	//@Test
-	//public void contextLoads() {
-	//	System.out.println("in InterviewApplicationTests::contextLoads");
-	//}
-	
-	private MockMvc mvc;
+  //@Test
+  //public void contextLoads() {
+  //  System.out.println("in InterviewApplicationTests::contextLoads");
+  //}
 
-    @Before
-    public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new GoodController()).build();
-    }
+  private MockMvc mvc;
 
-    @Test
-    public void testGetHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/api/good/hello").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Hello World")));
-    }
+  @Before
+  public void setUp() throws Exception {
+    mvc = MockMvcBuilders.standaloneSetup(new GoodController()).build();
+  }
+
+  @Test
+  public void testGetHello() throws Exception {
+    mvc.perform(MockMvcRequestBuilders.get("/api/good/hello").accept(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().string(equalTo("Hello World")));
+  }
 }

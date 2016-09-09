@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class InterviewApplication {
 
-	public static void main(String[] args) {
-		System.out.println("Before SpringApplication.run");
-		SpringApplication.run(InterviewApplication.class, args);
-		System.out.println("After SpringApplication.run");
-	}
+  public static void main(String[] args) {
+    System.out.println("Before SpringApplication.run");
+    SpringApplication.run(InterviewApplication.class, args);
+    System.out.println("After SpringApplication.run");
+  }
 }
