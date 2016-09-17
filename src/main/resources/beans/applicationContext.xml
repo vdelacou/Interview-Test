@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+				http://www.springframework.org/schema/tx
+				http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+				http://www.springframework.org/schema/jee
+				http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context-4.1.xsd
+				http://www.springframework.org/schema/schema/util
+				http://www.springframework.org/schema/schema/util/spring-util-4.1.xsd
+				http://www.springframework.org/schema/data/mongo
+				http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd
+        ">
+  
+      
+        <context:property-placeholder location="classpath:application.properties"/>
+        
+        <mongo:mongo host="${mongo.ip}" port="${mongo.port}"/>  
+        
+        <mongo:db-factory id="mongoDbFactory"
+                  host="${mongo.ip}"
+                  port="${mongo.port}"
+                  dbname="${mongo.db}"
+                  username="${mongo.username}"
+                  password="${mongo.password}"/>
+          
+          
+       <bean id="mongoTemplate" class="org.springframework.data.document.mongodb.MongoTemplate">     
+        <constructor-arg ref="mongo"/>     
+      </bean>     
+      
+       <tx:annotation-driven transaction-manager="transactionManager" />
+      
+   	 <!--scan package -->	
+     <context:component-scan base-package="com.mfg.dao,com.mfg.service" />
+          
+</beans>
