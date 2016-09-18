@@ -24,7 +24,7 @@
       
         <context:property-placeholder location="classpath:application.properties"/>
         
-        <mongo:mongo host="${mongo.ip}" port="${mongo.port}"/>  
+        <!-- <mongo:mongo host="${mongo.ip}" port="${mongo.port}"/>   -->
         
         <mongo:db-factory id="mongoDbFactory"
                   host="${mongo.ip}"
