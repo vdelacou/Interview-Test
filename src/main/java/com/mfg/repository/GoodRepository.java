@@ -7,4 +7,5 @@ import com.mfg.entities.Good;
 public interface GoodRepository extends MongoRepository<Good, String> {
 
 	Good findById(String id);
+	Good findByName(String name);
 }

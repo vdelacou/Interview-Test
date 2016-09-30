@@ -11,14 +11,15 @@ import org.springframework.data.annotation.Id;
 
 public class Good {
 	 @Id
+	 @NotNull(message = "id cannot empty for update", groups = { First.class })  
 	 public String id;
 	 
-	 @NotNull
-	 @NotEmpty
-	 @Size(max=50,min=1)
+	 @NotNull(message="username cannot be null!", groups = { First.class, Second.class })
+	 @NotEmpty(message="username cannot be empty!", groups = { First.class, Second.class })
+	 @Size(max=50,min=1,message="username should be within 1,50!", groups = { First.class, Second.class })
 	 private String name;
 	 
-	 @DecimalMin(value="1")
+	 @DecimalMin(value="1",message="user age at least should be 1!", groups = { First.class, Second.class })
 	 private int age;
 	 
 	 private Date productionDate;

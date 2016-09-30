@@ -4,8 +4,17 @@ public class JsonResult {
     
     private String code;  
     private String message;  
+    private Object object;
       
-    public JsonResult() {  
+    public Object getObject() {
+		return object;
+	}
+
+	public void setObject(Object object) {
+		this.object = object;
+	}
+
+	public JsonResult() {  
         this.setCode(ResultCode.SUCCESS);  
         this.setMessage("success£¡");  
           
