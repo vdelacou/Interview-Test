@@ -16,3 +16,6 @@ buildNumber.properties
 /target/
 /interview.iml
 .idea
+.idea/
+*.iml
+out
