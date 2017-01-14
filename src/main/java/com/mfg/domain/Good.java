@@ -1,10 +1,9 @@
 package com.mfg.domain;
 
-import com.querydsl.core.annotations.QueryEntity;
+
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -18,8 +17,6 @@ import java.util.UUID;
  */
 
 @Data
-@Document
-@QueryEntity    //使用qsdl
 public class Good implements Serializable{
 
     @Id
