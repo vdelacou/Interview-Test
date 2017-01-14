@@ -15,4 +15,4 @@ buildNumber.properties
 /.idea/
 /target/
 /interview.iml
-!/interview.iml
+.idea
