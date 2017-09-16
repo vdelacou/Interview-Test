@@ -1,4 +1,4 @@
-Interview Repo for MFG
+Interview Repo
 
 # To reply this interview please make a pull request on this repo
 
